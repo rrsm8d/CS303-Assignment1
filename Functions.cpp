@@ -82,7 +82,7 @@ void readFile(ifstream& in, int arr[], int& arrSize)
 	stringstream stream;
 	string readString;
 	int num;
-
+	cout << "[ ";
 	// While there are still new lines in the file...
 	while (getline(in, readString)) {
 		stream.clear();
@@ -92,12 +92,13 @@ void readFile(ifstream& in, int arr[], int& arrSize)
 		while (stream >> num)
 		{
 			// printArray(arr, arrSize);
-			cout << num << endl;
+			cout << num << " ";
 			appendArray(arr, num, arrSize);
 			// printArray(arr, arrSize);
 		}
 
 	}
+	cout << "] read from file" << endl;
 }
 
 void clearValue(int arr[], int index, int& arrSize)
